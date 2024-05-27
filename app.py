@@ -34,7 +34,7 @@ geography = geography_dict[geography]
 gender = gender_dict[gender]
 
 # Make predictions
-input_data = np.array([[customer_id, credit_score, geography, gender, age, tenure, balance, num_of_products, has_cr_card, is_active_member, estimated_salary]])
+input_data = np.array([[id,customer_id, credit_score, geography, gender, age, tenure, balance, num_of_products, has_cr_card, is_active_member, estimated_salary]])
 prediction = knn.predict(input_data)
 
 # Display prediction

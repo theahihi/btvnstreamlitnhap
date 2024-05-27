@@ -18,8 +18,8 @@ st.sidebar.title('Nhập các thuộc tính khách hàng')
 id=st.number_input("id khách",0,1000000,1002)
 Age = st.number_input("Tuổi", 18, 100, 30)
 CreditScore = st.number_input("Điểm tín dụng", 0, 10000, 600)
-Balance = st.number_input("Số dư tài khoản", 0.0, 1000000000, 50000.0)
-EstimatedSalary = st.number_input("Lương ước tính", 0.0, 1000000000, 53213.0)
+Balance = st.number_input("Số dư tài khoản", 0.0, 10000000, 50000.0)
+EstimatedSalary = st.number_input("Lương ước tính", 0.0, 10000000, 53213.0)
 
 # Make predictions
 input_data = np.array([[id,Age,CreditScore,Balance,EstimatedSalary]])

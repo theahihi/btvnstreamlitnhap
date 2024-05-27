@@ -13,6 +13,7 @@ st.title('Dự đoán khách hàng rời bỏ ngân hàng')
 st.sidebar.title('Nhập các thuộc tính khách hàng')
 
 # Number inputs for the features
+id= st.sidebar.number_input('số id', min_value=0, step=1)
 customer_id = st.sidebar.number_input('Mã khách hàng', min_value=0, step=1)
 credit_score = st.sidebar.number_input('Điểm tín dụng', min_value=300, max_value=850, step=1)
 geography = st.sidebar.selectbox('Quốc gia', ['France', 'Germany', 'Spain'])

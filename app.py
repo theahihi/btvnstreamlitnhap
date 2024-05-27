@@ -15,11 +15,11 @@ st.sidebar.title('Nhập các thuộc tính khách hàng')
 # Number inputs for the features
 
 
-credit_score = st.sidebar.number_input('Điểm tín dụng', min_value=300, max_value=850, step=1)
+credit_score = st.sidebar.number_input('Điểm tín dụng', min_value=0, max_value=1000, step=1)
 geography = st.sidebar.selectbox('Quốc gia', ['France', 'Germany', 'Spain'])
 gender = st.sidebar.selectbox('Giới tính', ['Nam', 'Nữ'])
 age = st.sidebar.number_input('Tuổi', min_value=18, max_value=100, step=1)
-tenure = st.sidebar.number_input('Thời gian sử dụng dịch vụ (năm)', min_value=0, max_value=10, step=1)
+tenure = st.sidebar.number_input('Thời gian sử dụng dịch vụ (năm)', min_value=0, max_value=50, step=1)
 balance = st.sidebar.number_input('Số dư tài khoản', min_value=0.0, step=1000.0, format="%.2f")
 num_of_products = st.sidebar.number_input('Số lượng sản phẩm sử dụng', min_value=1, max_value=4, step=1)
 has_cr_card = st.sidebar.selectbox('Có thẻ tín dụng', [0, 1])

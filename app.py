@@ -15,14 +15,16 @@ st.sidebar.title('Nhập các thuộc tính khách hàng')
 # Number inputs for the features
 
 
-id=st.number_input("id khách",0,1000000,1002)
-Age = st.number_input("Tuổi", 18, 100, 30)
-CreditScore = st.number_input("Điểm tín dụng", 0, 10000, 600)
-Balance = st.number_input("Số dư tài khoản", 0.0, 1000000, 50000.0)
-EstimatedSalary = st.number_input("Lương ước tính", 0.0, 1000000, 53213.0)
+
+
+customer_id = st.sidebar.number_input('Mã khách hàng', min_value=0, step=1)
+credit_score = st.sidebar.number_input('Điểm tín dụng', min_value=300, max_value=850, step=1)
+age = st.sidebar.number_input('Tuổi', min_value=18, max_value=100, step=1)
+balance = st.sidebar.number_input('Số dư tài khoản', min_value=0.0, step=1000.0, format="%.2f")
+estimated_salary = st.sidebar.number_input('Lương ước tính', min_value=0.0, step=1000.0, format="%.2f")
 
 # Make predictions
-input_data = np.array([[id,Age,CreditScore,Balance,EstimatedSalary]])
+input_data = np.array([[customer_id,age,credit_score,balance,estimated_salary]])
 prediction = knn.predict(input_data)
 
 # Display prediction

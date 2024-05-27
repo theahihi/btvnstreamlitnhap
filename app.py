@@ -39,4 +39,4 @@ prediction = knn.predict(input_data)
 
 # Display prediction
 st.write('## Kết quả dự đoán:')
-st.write('Khách hàng sẽ rời bỏ ngân hàng' if prediction[0] == 1 else 'Khách hàng sẽ không rời bỏ ngân hàng')
+st.write('Khách hàng sẽ rời bỏ ngân hàng' if prediction[0] == 0 else 'Khách hàng sẽ không rời bỏ ngân hàng')

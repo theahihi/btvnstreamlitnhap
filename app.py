@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the trained KNN model
-model_path = 'knn_model.pkl'
+model_path = 'knn_model2.pkl'
 knn = pickle.load(open(model_path, 'rb'))
 
 # Title of the application

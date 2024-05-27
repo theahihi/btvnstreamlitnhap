@@ -14,7 +14,7 @@ st.sidebar.title('Nhập các thuộc tính khách hàng')
 
 # Number inputs for the features
 
-customer_id = st.sidebar.number_input('Mã khách hàng', min_value=0, step=1)
+
 credit_score = st.sidebar.number_input('Điểm tín dụng', min_value=300, max_value=850, step=1)
 geography = st.sidebar.selectbox('Quốc gia', ['France', 'Germany', 'Spain'])
 gender = st.sidebar.selectbox('Giới tính', ['Nam', 'Nữ'])
@@ -34,7 +34,7 @@ geography = geography_dict[geography]
 gender = gender_dict[gender]
 
 # Make predictions
-input_data = np.array([[customer_id, credit_score, geography, gender, age, tenure, balance, num_of_products, has_cr_card, is_active_member, estimated_salary]])
+input_data = np.array([[credit_score, geography, gender, age, tenure, balance, num_of_products, has_cr_card, is_active_member, estimated_salary]])
 prediction = knn.predict(input_data)
 
 # Display prediction

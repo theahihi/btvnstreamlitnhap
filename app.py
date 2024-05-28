@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the trained KNN model
 model_path = 'bank_churn.pkl'
-knn = pickle.load(open(model_path, 'rb'))
+clf = pickle.load(open(model_path, 'rb'))
 
 # Title of the application
 st.title('Dự đoán khách hàng rời bỏ ngân hàng')
@@ -25,7 +25,7 @@ estimated_salary = st.sidebar.number_input('Lương ước tính', min_value=0.0
 
 # Make predictions
 input_data = np.array([[customer_id,age,credit_score,balance,estimated_salary]])
-prediction = knn.predict(input_data)
+prediction = clf.predict(input_data)
 
 # Display prediction
 st.write('## Kết quả dự đoán:')

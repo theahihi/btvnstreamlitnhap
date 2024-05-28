@@ -5,7 +5,7 @@ import pickle as pickle
 import streamlit as st
 import numpy as np
 data= pd.read_csv('train.csv')
-feature=['id','Age','CreditScore','Balance','EstimatedSalary']
+feature=['Age','CreditScore','Balance','EstimatedSalary']
 target=['Exited']
 X=data[feature]
 y=data[target]
